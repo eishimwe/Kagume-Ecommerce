@@ -21,7 +21,7 @@ Vue.component('menu-list',{
 
 Vue.component('item',{
 
-   template:'<li class=""><slot></slot></li>'
+   template:'<li class="active"><slot></slot></li>'
 
 });
 
