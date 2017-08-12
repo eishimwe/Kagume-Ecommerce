@@ -1,7 +1,7 @@
 
 Vue.component('menu-list',{
 
-    template:'<ul><item v-for="item in items">{{ item.description }}</item></ul>',
+    template:`<ul><item v-for="item in items"><a :href="item.link"><span>{{ item.description }}</span></a></item></ul>`,
 
     data() {
 
@@ -9,7 +9,7 @@ Vue.component('menu-list',{
 
             items:[
 
-                { description: 'Home', complete:true},
+                { description: "Home", link:'index.html',customClass:'active'},
 
             ]
 
@@ -19,10 +19,9 @@ Vue.component('menu-list',{
 
 });
 
-
 Vue.component('item',{
 
-   template:'<li class="active"><a href="index-2.html"><span><slot></slot></span></a></li>'
+   template:'<li class=""><slot></slot></li>'
 
 });
 
